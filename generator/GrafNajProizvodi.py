@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the data into a DataFrame
-data = pd.read_csv('test.csv')
-#data = pd.read_csv('retail_cleaned.csv')
+#data = pd.read_csv('generator/csv/prva_godina.csv')
+data = pd.read_csv('generator/csv/prva_godina.csv')
 
 # Group by product and sum the quantities sold
 product_sales = data.groupby('Description')['Quantity'].sum()

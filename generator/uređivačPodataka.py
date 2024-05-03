@@ -20,5 +20,5 @@ def clean_data(file_path):
     print(f"Cleaned data saved to: {cleaned_file_path}")
 
 if __name__ == "__main__":
-    file_path = 'retail.csv'
+    file_path = 'generator/csv/retail.csv'
     clean_data(file_path)
