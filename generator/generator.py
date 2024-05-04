@@ -29,7 +29,7 @@ if __name__ == '__main__':
     df.dropna(subset=['Description'], inplace=True)
 
     # Step 2: Identify the top products sold in the original dataset
-    top_n = 25  # Choose the number of top products you want to consider
+    top_n = 45  # Choose the number of top products you want to consider
     top_products = df['StockCode'].value_counts().nlargest(top_n)
     top_products = top_products / top_products.sum()  # Convert counts to probabilities
 
@@ -83,4 +83,4 @@ if __name__ == '__main__':
     new_df.sort_values(by='InvoiceDate', inplace=True)
 
     # Step 8: Write the generated transactions to a new CSV file
-    new_df.to_csv('generator/csv/prva_godina.csv', index=False)
+    new_df.to_csv('generator/csv/test.csv', index=False)

@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 
 # Load the data into a DataFrame
 #data = pd.read_csv('generator/csv/prva_godina.csv')
-data = pd.read_csv('generator/csv/prva_godina.csv')
+data = pd.read_csv('generator/csv/prva_godina_45.csv')
 
 # Group by product and sum the quantities sold
 product_sales = data.groupby('Description')['Quantity'].sum()
 
 # Sort the products by total quantity sold in descending order and get the top 50
-top_50_products = product_sales.sort_values(ascending=False).head(300)
+top_50_products = product_sales.sort_values(ascending=False).head(30)
 print("Number of unique products:", data['StockCode'].nunique())
 
 # Plotting
